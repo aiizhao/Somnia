@@ -5,11 +5,11 @@
  <body>
   <h1 class="title">{{f}}</h1>
   
-  <form action="/test_visualize" method="get">
-      <select name="file">
+  <form action="/command_visualize" method="GET">
+      <select name="c_file">
         <option value="{{f}}" selected>{{f}}</option>
-        {% for file in files %}
-          <option value="{{file}}">{{file}}</option>
+        {% for c_file in c_files %}
+          <option value="{{c_file}}">{{c_file}}</option>
         {% endfor %}
       </select>
       

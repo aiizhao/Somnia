@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+    {{name}}
+</h1>
+
+<br>
+<h2 class="subtitle">
+    View Data
+</h2>
+<form action="/test_visualize" method="get">
+    <select name="file">
+      <option value="{{files[0]}}" selected>{{files[0]}}</option>
+      {% for file in files[1:] %}
+        <option value="{{file}}">{{file}}</option>
+      {% endfor %}
+    </select>
+    
+    <input type="Submit" value="View">
+</form>
+
+<br>
+<h2 class="subtitle">
+    View Commands
+</h2>
+<form action="/command_visualize" method="get">
+    <select name="c_file">
+      <option value="{{c_files[0]}}" selected>{{c_files[0]}}</option>
+      {% for c_file in c_files[1:] %}
+        <option value="{{c_file}}">{{c_file}}</option>
+      {% endfor %}
+    </select>
+    
+    <input type="Submit" value="View">
+</form>
+
+{% endblock %}

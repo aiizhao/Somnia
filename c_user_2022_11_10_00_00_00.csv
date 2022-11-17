@@ -1,0 +1,6 @@
+Time After(mins),Command,Strength,Frequency,Time
+30,Rock,90,2,2
+100,Rock,50,1,2
+150,Push,40,2,2
+160,Rock,50,1,2
+180,Wake,90,2,0.5
